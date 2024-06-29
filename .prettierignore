@@ -1,0 +1,7 @@
+# paths
+node_modules/
+
+# files
+package.json
+tsconfig.json
+yarn.lock
