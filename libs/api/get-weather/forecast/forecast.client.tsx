@@ -7,7 +7,7 @@ export function getForecast(
   lat: number,
   lon: number,
 ): Promise<ForecastApiResponse> {
-  const url =
-    ' https://api.openweathermap.org/data/2.5/weather?lat=-23.550520&lon=-46.633309&appid=b1ee9e9f38014afde2cc484de26b3595&units=metric';
+  console.log(API_KEY);
+  const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=b1ee9e9f38014afde2cc484de26b3595&units=metric`;
   return axios.get<ForecastApiResponse>(url).then(response => response.data);
 }
